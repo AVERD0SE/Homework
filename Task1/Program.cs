@@ -6,6 +6,6 @@ int b = -3;
 int max = a;
 
 if (b > max) max = b;
-else Console.Write("max = ");
 
+Console.Write("max = ");
 Console.WriteLine(max);
