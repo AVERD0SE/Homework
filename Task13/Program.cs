@@ -1,7 +1,7 @@
 ﻿// Задайте одномерный массив, заполненный случайными числами. 
 // Найдите сумму элементов, стоящих на нечётных позициях.
 
-Console.Write("Задайте (цифрой) размер массива: ");
+Console.Write("Задайте (числом) размер массива: ");
 int length = Convert.ToInt32(Console.ReadLine());
 int[] number = new int[length];
 FillArrayRandNum(number);
@@ -12,7 +12,7 @@ int sum = 0;
 for (int j = 0; j < number.Length; j+=2)
     sum = sum + number[j];
 
-Console.WriteLine($"В массиве всего {number.Length} числа(-ел), а сумма элементов, стоящих на нечётных позициях = {sum}.");
+Console.WriteLine($"В массиве всего {number.Length} числа(-ел). Сумма элементов, стоящих на нечётных позициях = {sum}.");
 
 void FillArrayRandNum(int[] number){
     for(int i = 0; i < number.Length; i++){
