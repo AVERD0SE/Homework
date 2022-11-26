@@ -2,8 +2,8 @@
 // Напишите программу, которая покажет количество чётных чисел в массиве.
 
 Console.Write("Задайте (цифрой) размер массива: ");
-int lenght = Convert.ToInt32(Console.ReadLine());
-int[] number = new int[lenght];
+int length = Convert.ToInt32(Console.ReadLine());
+int[] number = new int[length];
 FillArrayRandNum(number);
 Console.WriteLine("Получившийся массив: ");
 PrintArray(number);
@@ -13,7 +13,7 @@ for (int j = 0; j < number.Length; j++)
 if (number[j] % 2 == 0)
 count++;
 
-Console.WriteLine($"В массиве всего {number.Length} чисел, {count} из них чётные.");
+Console.WriteLine($"В массиве всего {number.Length} числа(-ел), {count} из них - чётные.");
 
 void FillArrayRandNum(int[] number){
     for(int i = 0; i < number.Length; i++){
