@@ -68,13 +68,13 @@ string Print(int[] f)
     if (t < 0) t = -t;
     if (i == 1) { output += $"{t}x"; }
     if (i == 0) { output += $"{t}"; }
-    if (i != 1 && i != 0 && i > 1 && f[i] != 0) { output += $"{t}x^{i}";}
+    if (i != 1 & i != 0 & i > 1 & f[i] != 0) { output += $"{t}x^{i}";}
   }
   return output;
 }
 
-int[] f = { 1, 0, 0, 0, -9, -6 };
-int[] g = { 0, 1, -2, -5, 0, 0, 7, 3};
+int[] f = { 1, 0, 3, 0, -9, -6 };
+int[] g = { 0, 1, -2, -5, 1, 2, 4, 3};
 Console.WriteLine(Print(f));
 Console.WriteLine(Print(g));
 Console.WriteLine();
