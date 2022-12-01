@@ -38,17 +38,17 @@ int[] GetKoeff(int[,] tr, int pow){
 string PrintKoeff(int[] array)
 {
   string output = String.Empty;
-  int size = array.Length;
-  for (int i = 0; i < size; i++){
+  int length = array.Length;
+  for (int i = 0; i < length; i++){
     if (i != 0) { output += " + "; }
-    if((size - 1 - i) == 0){output += $"b^{i}"; }
-    if(i == 0){output += $"a^{size - 1 - i}"; }
-    if(size == 3 && array[i] != 1 && (size - 1 - i) != 0 && i != 0 && (size - 1 - i) == 1 && i == 1) {output += $"{array[i]}ab"; }
-    if(size != 3 && array[i] == 1 && (size - 1 - i) != 0 && i != 0 && i != 1) {output += $"a^{size - 1 - i}b^{i}"; }
-    if(size != 3 && array[i] != 1 && (size - 1 - i) != 0 && i != 0 && (size - 1 - i) == 1) {output += $"{array[i]}ab^{i}"; }
-    if(size != 3 && array[i] != 1 && (size - 1 - i) != 0 && i != 0 && i == 1) {output += $"{array[i]}a^{size - 1 - i}b"; }    
-    if(size != 3 && array[i] != 1 && (size - 1 - i) != 0 && i != 0 && (size - 1 - i) == 1 && i == 1) {output += $"{array[i]}ab"; }    
-    if(size != 3 && array[i] != 1 && (size - 1 - i) != 0 && i != 0 && (size - 1 - i) != 1 && i != 1) {output += $"{array[i]}a^{size - 1 - i}b^{i}"; }
+    if((length - 1 - i) == 0){output += $"b^{i}"; }
+    if(i == 0){output += $"a^{length - 1 - i}"; }
+    if(length == 3 & array[i] != 1 & (length - 1 - i) != 0 & i != 0 & (length - 1 - i) == 1 & i == 1) {output += $"{array[i]}ab"; }
+    if(length != 3 & array[i] == 1 & (length - 1 - i) != 0 & i != 0 & i != 1) {output += $"a^{length - 1 - i}b^{i}"; }
+    if(length != 3 & array[i] != 1 & (length - 1 - i) != 0 & i != 0 & (length - 1 - i) == 1) {output += $"{array[i]}ab^{i}"; }
+    if(length != 3 & array[i] != 1 & (length - 1 - i) != 0 & i != 0 & i == 1) {output += $"{array[i]}a^{length - 1 - i}b"; }    
+    if(length != 3 & array[i] != 1 & (length - 1 - i) != 0 & i != 0 & (length - 1 - i) == 1 & i == 1) {output += $"{array[i]}ab"; }    
+    if(length != 3 & array[i] != 1 & (length - 1 - i) != 0 & i != 0 & (length - 1 - i) != 1 & i != 1) {output += $"{array[i]}a^{length - 1 - i}b^{i}"; }
   }
     return output;
 }
