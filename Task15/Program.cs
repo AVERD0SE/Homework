@@ -52,7 +52,6 @@ int[] Dif(int[] f, int[] g)
     if (resultMax == powG) result[i] = -g[i];
     else result[i] = f[i];
   }
-
   return result;
 }
 
@@ -73,8 +72,8 @@ string Print(int[] f)
   return output;
 }
 
-int[] f = { 1, 0, 3, 0, -9, -6 };
-int[] g = { 0, 1, -2, -5, 1, 2, 4, 3};
+int[] f = { 1, 0, 0, 0, -9, -6 };
+int[] g = { 0, 1, -2, -5, 0, 0, 7, 3};
 Console.WriteLine(Print(f));
 Console.WriteLine(Print(g));
 Console.WriteLine();
