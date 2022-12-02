@@ -5,7 +5,8 @@ int n = InputInt("Введите натуральное число: ");
 int m = 1;
 if (n < 1)
 {
-    Console.WriteLine("Ввели не натуральное число");
+    Console.WriteLine("Введено не натуральное число");
+    return;
 }
 Console.WriteLine(NaturalNumber(n, m));
 
@@ -22,8 +23,8 @@ int NaturalNumber(int n, int m)
     return m;
 }
 
-int InputInt(string output)
+int InputInt(string input)
 {
-    Console.Write(output);
+    Console.Write(input);
     return int.Parse(Console.ReadLine());
 }
