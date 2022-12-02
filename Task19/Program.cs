@@ -9,12 +9,15 @@ PrintArray(number);
 int minSum = Int32.MaxValue;
 int indexLine = 0;
 
-for (int i = 0; i < number.GetLength(0); i++){
+for (int i = 0; i < number.GetLength(0); i++)
+{
     int sum = 0;
-    for (int j = 0; j < number.GetLength(1); j++){
+    for (int j = 0; j < number.GetLength(1); j++)
+    {
         sum = sum + number[i, j];        
     }
-    if (sum < minSum){
+    if (sum < minSum)
+    {
         minSum = sum;
         indexLine++;
     }
@@ -23,18 +26,24 @@ for (int i = 0; i < number.GetLength(0); i++){
 Console.WriteLine("Номер строки с наименьшей суммой элементов: " + (indexLine));
 Console.WriteLine("Сумма элементов этой строки = " + (minSum));
 
-void FillArrayRandomNumbers(int[,] array){
-    for (int i = 0; i < array.GetLength(0); i++){
-        for (int j = 0; j < array.GetLength(1); j++){
+void FillArrayRandomNumbers(int[,] array)
+{
+    for (int i = 0; i < array.GetLength(0); i++)
+    {
+        for (int j = 0; j < array.GetLength(1); j++)
+        {
             array[i, j] = new Random().Next(0, 10);
         }
     }
 }
 
-void PrintArray(int[,] array){
-    for (int i = 0; i < array.GetLength(0); i++){
+void PrintArray(int[,] array)
+{
+    for (int i = 0; i < array.GetLength(0); i++)
+    {
         Console.Write("[ ");
-        for (int j = 0; j < array.GetLength(1); j++){
+        for (int j = 0; j < array.GetLength(1); j++)
+        {
             Console.Write(array[i, j] + " ");
         }
         Console.Write("]");

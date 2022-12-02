@@ -8,9 +8,12 @@ int size3 = InputInt("Введите размерность 3: ");
 
 int[,,] result = Create3DMassive(size1, size2, size3);
 
-for (int i = 0; i < result.GetLength(0); i++){
-    for (int j = 0; j < result.GetLength(1); j++){
-        for (int n = 0; n < result.GetLength(2); n++){
+for (int i = 0; i < result.GetLength(0); i++)
+{
+    for (int j = 0; j < result.GetLength(1); j++)
+    {
+        for (int n = 0; n < result.GetLength(2); n++)
+        {
             Console.WriteLine($"[{i},{j},{n}] - {result[i, j, n]}");
         }
         Console.WriteLine();
@@ -18,15 +21,19 @@ for (int i = 0; i < result.GetLength(0); i++){
     Console.WriteLine();
 }
 
-int[,,] Create3DMassive(int size1, int size2, int size3){
+int[,,] Create3DMassive(int size1, int size2, int size3)
+{
     int[,,] array = new int[size1, size2, size3];
     int[] values = new int[size1 * size2 * size3];
     int num = 10;
     for (int i = 0; i < values.Length; i++)
+    {
         values[i] = num
         ++;
+    }
 
-    for (int i = 0; i < values.Length; i++){
+    for (int i = 0; i < values.Length; i++)
+    {
         int randIndex = new Random().Next(0, values.Length);
         int temp = values[i];
         values[i] = values[randIndex];
@@ -35,9 +42,12 @@ int[,,] Create3DMassive(int size1, int size2, int size3){
 
     int valueIndex = 0;
 
-    for (int i = 0; i < array.GetLength(0); i++){
-        for (int j = 0; j < array.GetLength(1); j++){
-            for (int n = 0; n < array.GetLength(2); n++){
+    for (int i = 0; i < array.GetLength(0); i++)
+    {
+        for (int j = 0; j < array.GetLength(1); j++)
+        {
+            for (int n = 0; n < array.GetLength(2); n++)
+            {
                 array[i, j, n] = values[valueIndex++];
             }
         }
@@ -45,7 +55,8 @@ int[,,] Create3DMassive(int size1, int size2, int size3){
     return array;
 }
 
-int InputInt(string output){
+int InputInt(string output)
+{
     Console.Write(output);
     return int.Parse(Console.ReadLine());
 }
