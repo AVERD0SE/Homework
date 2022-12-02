@@ -1,21 +1,21 @@
 ﻿// Задайте значения M и N. Напишите программу, 
 // которая найдёт сумму натуральных элементов в промежутке от M до N.
 
-int M = InputInt("Введите M: ");
-int N = InputInt("Введите N: ");
-Console.WriteLine($"Сумма натуральных элементов от {M} до {N} = {CountNaturalSum(M, N)}");
+int m = InputInt("Введите M: ");
+int n = InputInt("Введите N: ");
+Console.WriteLine($"Сумма натуральных элементов от {m} до {n} = {CountNaturalSum(m, n)}");
 
-int InputInt(string output)
+int InputInt(string input)
 {
-    Console.Write(output);
+    Console.Write(input);
     return int.Parse(Console.ReadLine());
 }
 
-int CountNaturalSum(int M, int N)
+int CountNaturalSum(int m, int n)
 {
-    if (M == N)
+    if (m == n)
     {
-        return N;
+        return n;
     }
-    return N + CountNaturalSum(M, N - 1);
+    return n + CountNaturalSum(m, n - 1);
 }
