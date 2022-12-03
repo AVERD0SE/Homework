@@ -5,9 +5,9 @@ int m = InputInt("Введите положительное число M: ");
 int n = InputInt("Введите положительное число N: ");
 Console.WriteLine($"A({m},{n}) = {Akkerman(m, n)}");
 
-int InputInt(string output)
+int InputInt(string input)
 {
-    Console.Write(output);
+    Console.Write(input);
     return int.Parse(Console.ReadLine());
 }
 
